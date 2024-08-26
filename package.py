@@ -8,8 +8,11 @@ class Package:
         self.delivery_zip = delivery_zip
         self.delivery_deadline = delivery_deadline
         self.package_weight = package_weight
-        self.delivery_status = delivery_status
+        self.delivery_status = 'At Hub' # Default
 
     def __repr__(self):
-        return(f"{self.package_id}, {self.delivery_address}, {self.delivery_city}, {self.delivery_state} "
-               f"{self.delivery_zip}, {self.delivery_deadline} {self.package_weight}, {self.delivery_status}")
+        return(f"{self.package_id}, {self.delivery_address}, {self.delivery_city}, {self.delivery_state}, "
+               f"{self.delivery_zip}, {self.delivery_deadline}, {self.package_weight}, {self.delivery_status}")
+
+    def update_status(self, status):
+        self.delivery_status = status
