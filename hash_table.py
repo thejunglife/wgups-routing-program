@@ -27,3 +27,19 @@ class HashTable:
         package_list.append(package_entry)
         return True
 
+    # Lookup items in hash table
+    def lookup(self, package_id):
+        package_slot = self._hash(package_id)
+        package_list = self.table[package_slot]
+
+        for entry in package_list:
+            if package_id == entry[0]:
+                return entry[1]
+            return None # only if package is not found
+
+
+    # Using f string
+    def __repr__(self):
+        # Create a string representation of the hash table
+        return '\n'.join(f"Bucket {i}: {bucket}" for i, bucket in enumerate(self.table) if bucket)
+
