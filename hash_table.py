@@ -1,5 +1,4 @@
 
-
 class HashTable:
     def __init__(self, packages=40):
         self.packages = packages
