@@ -1,6 +1,6 @@
 
 class Package:
-    def __init__(self, package_id, delivery_address, delivery_deadline, delivery_city, delivery_state, delivery_zip, package_weight, delivery_status, delivery_time, depart_time, truck_number):
+    def __init__(self, package_id, delivery_address, delivery_city, delivery_state, delivery_zip, delivery_deadline, package_weight, delivery_status, delivery_time, depart_time, truck_number):
         self.package_id = package_id
         self.delivery_address = delivery_address
         self.delivery_city = delivery_city
